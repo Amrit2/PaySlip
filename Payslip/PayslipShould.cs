@@ -14,9 +14,9 @@ namespace Calculator
         [TestMethod]
         public void GetInput()
         {
-            string userInput = "David,Rudd,600050,9%,01 March- 31 March";
-            Payslip payslip = new Payslip();
-            EmployeeInfo name = payslip.SplitTheInput(userInput);
+            var userInput = "David,Rudd,600050,9%,01 March- 31 March";
+            var payslip = new Payslip(); //name => employeeinfo
+            var name = payslip.SplitTheInput(userInput);
 
             //Assert.AreEqual("David Rudd", name.ToString());
             Assert.AreEqual("01 March- 31 March", name.Period);

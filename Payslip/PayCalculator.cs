@@ -4,10 +4,14 @@ namespace Calculator
 {
     internal class PayCalculator
     {
-        internal string FindPeriod()
+        /* have it standalone so it's not directly couples with the calculate tax income
+        private TaxTable _taxTable;    TaxTable = class
+
+        public PayCalculator(TaxTable taxTable)
         {
-           throw new NotImplementedException();
+            _taxTable = taxTable;
         }
+        */
 
         internal int calculateGrossIncome(int salary)
         {
@@ -15,8 +19,9 @@ namespace Calculator
             return result;
         }
 
-        internal double calculateIncomeTax(double income)
+        internal double calculateIncomeTax(double income) // have in a separate class that stores the list of tax bracket = loop through
         {
+            
             double result = 0;
             double Income;
 
